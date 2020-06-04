@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="jumbotron" style="background-color: #f2f2f2;">
+    <!-- (ngSubmit)="doSubmit(frm)" -->
+    <form ngNativeValidate #frm="ngForm" >
+    <h1 class="login-header">{{title}}</h1>
+
+      <div [ngClass]="failureMsg" *ngIf="failureMsg == 'failure'">
+        <b>Login is failure . Please check the username or password </b>.
+      </div>
+      <div [ngClass]="serverFailureMsg" *ngIf="failureMsg == 'server'">
+        <b>Server is down . Please check with Admin</b>.
+      </div>
+      <div class="form-group">
+        <label for="uname"><b>Username</b></label>
+        <input
+          type="text"
+          class="form-control"
+          required
+          placeholder="Enter Username"
+          [(ngModel)]="username"
+          name="uname"
+        />
+      </div>
+      <div class="form-group">
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          class="form-control"
+          required
+          placeholder="Enter Password"
+          [(ngModel)]="password"
+          name="psw"
+        />
+      </div>
+      <!--  -->
+      <!-- [disabled]="frm.invalid" -->
+      <button class="btn btn-primary" (click)="doLogin(username,password)" type="submit" name="button">
+        Login
+      </button>
+    </form>
+  </div>
+</div>

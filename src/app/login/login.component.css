@@ -1,0 +1,58 @@
+.login-header {
+  text-align: center;
+  color: #007bff;
+  padding-bottom: 35px;
+
+}
+
+
+/* Bordered form */
+
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  width: 100%;
+
+  background-color: #f2f2f2;
+  padding: 35px 20px 15px 30px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.failure {
+  padding-bottom: 40px;
+  text-align: center;
+  color: red;
+  width: 100%;
+  height: 25px;
+}
+.serverMsg{
+  padding: 12px;
+  text-align: center;
+  color: red;
+  width: 100%;
+  height: 25px;
+}

@@ -1,0 +1,68 @@
+<div class="container">
+  <div [ngClass]="successMsg" *ngIf="paymentResult == 'success'">
+    <b>The Payment is Successfull. Please note down the payment-id</b>
+    <mark>{{ paymentId }}</mark>
+  </div>
+  <div [ngClass]="failureMsg" *ngIf="paymentResult == 'failure'">
+    <b>The Payment is failure. The reason is {{ reason }} </b>.
+  </div>
+  <h4 class="p-header" style="color: #007bff;">Payment Details</h4>
+  <!-- (ngSubmit)="initiatePayment(paymentForm)" -->
+  <form ngNativeValidate  #paymentForm="ngForm">
+    <div class="row">
+      <div class="col-md-12">
+        <label for="amount"><b>Amount</b></label>
+        <input
+          type="text" required
+          id="camount"
+          name="amount"
+          [(ngModel)]="amount"
+          placeholder="Amount" required pattern="[0-9]+([,\.][0-9]+)?" 
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="currency"><b>Currency</b></label>
+        <input
+          type="text" required
+          id="ccurrency"
+          name="currency"
+          placeholder="currency"
+          [(ngModel)]="currency" required  maxlength="3" pattern="[A-Z]*"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="dcnum"><b>Debit card number</b></label>
+        <input
+          type="text"
+          id="dcnum"
+          name="dccardnumber"
+          placeholder="1111-2222-3333-4444"
+          [(ngModel)]="debtorIBAN"  maxlength="18" required  pattern="[a-zA-Z0-9]+"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="ccnum"><b>Credit card number</b></label>
+        <input
+          type="text"
+          id="ccnum"
+          name="cccardnumber"
+          placeholder="1111-2222-3333-4444"
+          [(ngModel)]="creditorIBAN"  maxlength="18"  pattern="[a-zA-Z0-9]+"
+        />
+      </div>
+    </div>
+    <input
+      type="submit"
+      [disabled]="!isValid"
+      value="Continue to pay"
+      class="btn btn-primary" (click)="initiatePayment()"
+    />
+    <!--  -->
+  </form>
+</div>
