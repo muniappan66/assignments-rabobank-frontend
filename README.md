@@ -1,10 +1,13 @@
 # InitiatePayment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Angular -  
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Login with UI application  username : test ,  password: password123 
+2. http://localhost:4200/login   - login function (Login - button)
+   http://localhost:4200/payment  - rabo payment validtion (Continue to pay - button)
+3. The request-id, certificates, signatures are passed in the header values with hardcoded provided input. 
+4. we can edit the data in payment page. Based on the validation success or error message is displayed
+   when the continue to pay button is clicked.
 
 ## Code scaffolding
 
