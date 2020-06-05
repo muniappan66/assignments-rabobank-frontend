@@ -47,17 +47,17 @@ export class PaymentComponent implements OnInit {
         this.validated = data;
         if (this.validated.status == "Accepted") {
           this.paymentId = this.validated.paymentId;
-          this.isValid = true;
+          this.isValid = false;
           this.paymentResult = "success";
         } else {
           this.paymentResult = "failure";
-          this.isValid = false;
+          this.isValid = true;
           this.reason = this.validated.reasonCode;
         }
       },
       (error) => {
         this.paymentResult = "failure";
-          this.isValid = false;
+          this.isValid = true;
           this.reason = error.message;
       }
     );
