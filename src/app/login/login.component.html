@@ -15,10 +15,10 @@
         <input
           type="text"
           class="form-control"
-          required
+           [required]="'!username.valid'"
           placeholder="Enter Username"
           [(ngModel)]="username"
-          name="uname"
+          name="uname" 
         />
       </div>
       <div class="form-group">
@@ -26,15 +26,15 @@
         <input
           type="password"
           class="form-control"
-          required
+          [required]="'!password.valid'"
           placeholder="Enter Password"
           [(ngModel)]="password"
-          name="psw"
+          name="psw" 
         />
       </div>
       <!--  -->
       <!-- [disabled]="frm.invalid" -->
-      <button class="btn btn-primary" (click)="doLogin(username,password)" type="submit" name="button">
+      <button class="btn btn-primary" [disabled]="!frm.valid" (click)="doLogin(username,password)" type="submit" name="button">
         Login
       </button>
     </form>
