@@ -25,7 +25,7 @@
       <div class="col-md-12">
         <label for="currency"><b>Currency</b></label>
         <input
-          type="text" required
+          type="text" required  style="text-transform:uppercase"
           id="ccurrency"
           name="currency"
           placeholder="currency"
@@ -59,10 +59,10 @@
     </div>
     <input
       type="submit"
-      [disabled]="!isValid"
+      [disabled]="!paymentForm.valid || !isValid"
       value="Continue to pay"
       class="btn btn-primary" (click)="initiatePayment()"
     />
-    <!--  -->
+    <!--   [disabled]="!isValid" -->
   </form>
 </div>
