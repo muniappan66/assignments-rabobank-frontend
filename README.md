@@ -9,7 +9,7 @@ Angular -
 4. we can edit the data in payment page. Based on the validation success or error message is displayed
    when the continue to pay button is clicked.
 5. Unit testing done with karma, jasmine.
-6. Codecoverage report is attached in the files.
+6. Codecoverage report details are attached in the Karma-CodeCoverage.docx. Please check.
 
 ## Code scaffolding
 
