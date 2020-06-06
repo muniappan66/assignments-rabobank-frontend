@@ -10,7 +10,11 @@
       <div [ngClass]="serverFailureMsg" *ngIf="failureMsg == 'server'">
         <b>Server is down . Please check with Admin</b>.
       </div>
+      <div [ngClass]="serverFailureMsg"  *ngIf="!frm.valid">
+        <b>Please provide below the valid details.</b>.
+      </div>
       <div class="form-group">
+        
         <label for="uname"><b>Username</b></label>
         <input
           type="text"

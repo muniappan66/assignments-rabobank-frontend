@@ -38,13 +38,6 @@ describe("LoginComponent", () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual("Login to Initiate Payments From Rabobank");
   }));
-  xit("login test", () => {
-    const fixture = TestBed.createComponent(LoginComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.username).toBeFalse();
-    expect(app.password).toBeFalse();
-    expect(true).toBe(true);
-  });
  
   it('login method success scenario testing',()=>{
    mockLoginService.login.and.returnValue(of(true));

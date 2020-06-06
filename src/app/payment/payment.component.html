@@ -6,9 +6,13 @@
   <div [ngClass]="failureMsg" *ngIf="paymentResult == 'failure'">
     <b>The Payment is failure. The reason is {{ reason }} </b>.
   </div>
+  <div class="validateDataError" *ngIf="!paymentForm.valid">
+    <b>Please provide below the valid details.</b>.
+  </div>
   <h4 class="p-header" style="color: #007bff;">Payment Details</h4>
   <!-- (ngSubmit)="initiatePayment(paymentForm)" -->
   <form ngNativeValidate  #paymentForm="ngForm">
+    
     <div class="row">
       <div class="col-md-12">
         <label for="amount"><b>Amount</b></label>
